@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 public class App
 {
+
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
         String input;
+        NumberConverter converter = new NumberConverter();
         boolean exit = false;
 
         while (!exit){
@@ -17,7 +19,7 @@ public class App
                 exit = true;
             } else {
                 if (isValidInput(input)) {
-                    String asText = convertToText(input);
+                    String asText = converter.convertNumberToText(input);
                     System.out.println(asText);
                 } else {
                     printBadInputMessage(input);
