@@ -10,16 +10,26 @@ public class NumberConverterTest {
     public void convertLessThanHundred() throws Exception {
         NumberConverter converter = new NumberConverter();
 
-        assertEquals("zero", converter.convertLessThanHundred(0));
-        assertEquals("one", converter.convertLessThanHundred(1));
-        assertEquals("nineteen", converter.convertLessThanHundred(19));
-        assertEquals("twenty", converter.convertLessThanHundred(20));
-        assertEquals("twenty one", converter.convertLessThanHundred(21));
-        assertEquals("thirty seven", converter.convertLessThanHundred(37));
-        assertEquals("ninety nine", converter.convertLessThanHundred(99));
-
-
+        assertEquals("zero", converter.convertHundreds(0));
+        assertEquals("one", converter.convertHundreds(1));
+        assertEquals("nineteen", converter.convertHundreds(19));
+        assertEquals("twenty", converter.convertHundreds(20));
+        assertEquals("twenty one", converter.convertHundreds(21));
+        assertEquals("thirty seven", converter.convertHundreds(37));
+        assertEquals("twenty", converter.convertHundreds(20));
+        assertEquals("ninety nine", converter.convertHundreds(99));
 
     }
 
+    @Test
+    public void convertHundreds() throws Exception {
+        NumberConverter converter = new NumberConverter();
+
+        assertEquals("one hundred", converter.convertHundreds(100));
+        assertEquals("one hundred fourteen", converter.convertHundreds(114));
+        assertEquals("three hundred forty seven", converter.convertHundreds(347));
+        assertEquals("six hundred seventy", converter.convertHundreds(670));
+        assertEquals("nine hundred ninety nine", converter.convertHundreds(999));
+
+    }
 }
