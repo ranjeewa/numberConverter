@@ -9,7 +9,8 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
         String input;
-        NumberConverter converter = new NumberConverter();
+
+        RecursiveConverter converter = new RecursiveConverter();
         boolean exit = false;
 
         while (!exit){
@@ -46,7 +47,4 @@ public class App
         }
     }
 
-    private static String convertToText(String input) {
-        return input;
-    }
 }
