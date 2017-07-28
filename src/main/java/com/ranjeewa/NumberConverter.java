@@ -2,7 +2,7 @@ package com.ranjeewa;
 
 import java.util.Scanner;
 
-public class App
+public class NumberConverter
 {
 
     public static void main( String[] args )

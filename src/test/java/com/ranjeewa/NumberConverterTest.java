@@ -4,9 +4,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Unit test for simple App.
+ * Unit test for simple NumberConverter.
  */
-public class AppTest 
+public class NumberConverterTest
 {
 
     @Test
@@ -27,11 +27,11 @@ public class AppTest
     }
 
     private static void confirmValid(String validInt) {
-        assertTrue(validInt + " should be a valid input", App.isValidInput(validInt));
+        assertTrue(validInt + " should be a valid input", NumberConverter.isValidInput(validInt));
     }
 
     private static void confirmInvalid(String invalidInt) {
-        assertFalse(invalidInt + " should be an invalid input", App.isValidInput(invalidInt));
+        assertFalse(invalidInt + " should be an invalid input", NumberConverter.isValidInput(invalidInt));
     }
 
 }
